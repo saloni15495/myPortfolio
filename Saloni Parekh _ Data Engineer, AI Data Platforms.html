@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saloni Parekh | Data Engineer, AI Data Platforms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#EDF1F5;--panel:#FFFFFF;--ink:#13233F;--muted:#4C5B73;--line:#CBD5E1;--accent:#B45309;--accent-bg:#FBE7C6;--on-accent:#fff;
+--display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A2E;--panel:#17263F;--ink:#E8EEF7;--muted:#9FB0C8;--line:#2B3C58;--accent:#F5B84B;--accent-bg:#3A2E16;--on-accent:#13233F}}
+:root[data-theme="dark"]{--bg:#0F1A2E;--panel:#17263F;--ink:#E8EEF7;--muted:#9FB0C8;--line:#2B3C58;--accent:#F5B84B;--accent-bg:#3A2E16;--on-accent:#13233F}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:15px}
+nav .links{display:flex;gap:20px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.name{font-family:var(--display);font-weight:700;font-size:18px;color:var(--ink)}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(38px,7vw,76px);font-weight:700;max-width:14em}
+.hero p{max-width:34em;color:var(--muted);font-size:19px;margin:24px 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn:hover{filter:brightness(1.08)}
+.flow{margin:24px 0 8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:28px}
+.flow h2{font-size:24px;margin-bottom:6px}
+.flow>p{margin:0 0 24px;color:var(--muted)}
+.track{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.track::before{content:"";position:absolute;left:12.5%;right:12.5%;top:21px;height:2px;background:var(--line)}
+.stage{background:none;border:0;font:inherit;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 4px;position:relative}
+.stage .dot{width:44px;height:44px;border-radius:50%;background:var(--panel);border:2px solid var(--line);display:grid;place-items:center;font-family:var(--display);font-weight:700;transition:background .25s,border-color .25s,color .25s}
+.stage[aria-selected="true"]{color:var(--ink);font-weight:500}
+.stage[aria-selected="true"] .dot{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.detail{margin-top:26px;padding:20px;border-left:4px solid var(--accent);background:var(--accent-bg);border-radius:0 6px 6px 0;min-height:112px}
+.detail h3{font-size:20px;margin-bottom:6px}
+.detail p{margin:0 0 8px}
+.detail .proof{font-weight:500;margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin:48px 0 0;border-top:1px solid var(--line)}
+.stats div{padding:20px 20px 20px 0}
+.stats b{display:block;font-family:var(--display);font-size:22px}
+.stats span{color:var(--muted);font-size:15px}
+section{padding:64px 0 0}
+section>h2{font-size:clamp(28px,4vw,40px);margin-bottom:28px}
+.row{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line)}
+.row h3{font-size:21px;margin-bottom:8px}
+.row .when{color:var(--muted);font-size:15px}
+.row p{margin:0 0 10px;max-width:62ch}
+.row .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{font-size:13.5px;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.skills h3{font-size:18px;margin-bottom:8px}
+.skills p{margin:0;color:var(--muted)}
+.path{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.path li{padding:0 0 26px 24px;position:relative}
+.path li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.path b{font-family:var(--display);font-size:19px}
+.path span{display:block;color:var(--muted);font-size:15px}
+.contact{margin:72px 0 0;padding:44px 0 56px;border-top:1px solid var(--line)}
+.contact h2{font-size:clamp(28px,4vw,44px);max-width:16em;margin-bottom:16px}
+.contact p{color:var(--muted);max-width:36em;margin:0 0 26px}
+footer{color:var(--muted);font-size:14px;padding-bottom:32px}
+@media (max-width:720px){
+.row{grid-template-columns:1fr;gap:6px}
+.track{grid-template-columns:repeat(2,1fr);row-gap:20px}.track::before{display:none}
+.flow{padding:20px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.stage .dot{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><span class="name">Saloni Parekh</span>
+<div class="links"><a href="#how">How I work</a><a href="#work">Work</a><a href="#path">Growth</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<h1>I build the data foundations that AI products run on.</h1>
+<p>Data engineer at BlackRock. I design the pipelines, quality checks and automation that keep data reliable and ready for AI and analytics, from first ingestion to the platform people build on. Based in Mumbai.</p>
+<div class="btns"><a class="btn primary" href="mailto:saloniparekh2001@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/saloni--parekh" target="_blank" rel="noopener">View LinkedIn</a></div>
+</header>
+
+<div class="flow" id="how">
+<h2>From raw to ready</h2>
+<p>Select a stage to see what I built there.</p>
+<div class="track" role="tablist" aria-label="Data pipeline stages">
+<button class="stage" role="tab" aria-selected="true" data-i="0"><span class="dot">1</span>Acquire</button>
+<button class="stage" role="tab" aria-selected="false" data-i="1"><span class="dot">2</span>Validate</button>
+<button class="stage" role="tab" aria-selected="false" data-i="2"><span class="dot">3</span>Enrich</button>
+<button class="stage" role="tab" aria-selected="false" data-i="3"><span class="dot">4</span>Serve</button>
+</div>
+<div class="detail" id="detail" role="tabpanel" aria-live="polite"></div>
+</div>
+
+<div class="stats">
+<div><b>50+</b><span>production data initiatives as primary engineer</span></div>
+<div><b>1.5 days to 2–3 hours</b><span>release preparation time</span></div>
+<div><b>~40%</b><span>faster processing after a legacy module rewrite</span></div>
+<div><b>9.26 / 10</b><span>CGPA, B.Tech in Computer Science</span></div>
+</div>
+
+<section id="work">
+<h2>Selected work</h2>
+<div class="row"><div><h3>ASIMOV</h3><span class="when">AI knowledge platform</span></div>
+<div><p>Built ELT pipelines in Python, SQL, Snowflake and Google Cloud that turn broker research reports into AI-ready datasets for an internal knowledge platform.</p><p>Ingestion covers reports from 2019 onwards, with metadata that lets people retrieve by broker, asset class and geography.</p><div class="tags"><span class="tag">Snowflake</span><span class="tag">GCP</span><span class="tag">Metadata</span><span class="tag">ELT</span></div></div></div>
+<div class="row"><div><h3>Spectra</h3><span class="when">Document processing platform</span></div>
+<div><p>Developed backend pipelines that retrieve research documents, enrich their metadata and publish standardized datasets to Snowflake for downstream search and AI applications.</p><p>Added automated validation across ingestion to keep data consistent and trustworthy.</p><div class="tags"><span class="tag">Python</span><span class="tag">Data validation</span><span class="tag">Snowflake</span></div></div></div>
+<div class="row"><div><h3>Developer workflow automation</h3><span class="when">AI-assisted engineering</span></div>
+<div><p>Engineered a Windsurf workflow that validates SQL, generates YAML files for expert review, opens pull requests with reviewers assigned, and produces release packets after approval.</p><p>Release preparation dropped from about 1–1.5 days to 2–3 hours.</p><div class="tags"><span class="tag">Windsurf</span><span class="tag">YAML</span><span class="tag">Git</span><span class="tag">Azure DevOps</span></div></div></div>
+<div class="row"><div><h3>Production data quality</h3><span class="when">Validation frameworks</span></div>
+<div><p>Built SQL and Python frameworks that catch data issues before they reach production, and worked with engineering teams on root cause analysis across several ingestion workflows.</p></div></div>
+<div class="row"><div><h3>Snowflake migration</h3><span class="when">Cloud modernization</span></div>
+<div><p>Led my team's move to Snowflake and set up a repeatable onboarding process, working alongside BigQuery and Cloud Storage for ingestion and transformation.</p></div></div>
+<div class="row"><div><h3>Retrieval research</h3><span class="when">In progress</span></div>
+<div><p>Evaluating chunking strategies, embedding approaches and metadata organization for large research documents, to improve retrieval quality in AI search.</p><div class="tags"><span class="tag">Chunking</span><span class="tag">Embeddings</span><span class="tag">Information retrieval</span></div></div></div>
+</section>
+
+<section id="path">
+<h2>Growth at BlackRock</h2>
+<ul class="path">
+<li><b>Associate, Data and Analytics</b><span>Jan 2026 to present. AI data platforms, data products, developer automation.</span></li>
+<li><b>Analyst</b><span>Jul 2023 to Dec 2025. Data acquisition, data quality, Snowflake migration, engineering reporting.</span></li>
+<li><b>Intern</b><span>Jan 2023 to Jun 2023. Migrated synchronous processing modules for about 40% higher throughput.</span></li>
+</ul>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Languages</h3><p>Python, SQL</p></div>
+<div><h3>Cloud and data platforms</h3><p>Snowflake, Google Cloud Platform, BigQuery, Cloud Storage</p></div>
+<div><h3>Data engineering</h3><p>ELT and ETL pipelines, data validation, data quality, metadata management, data products</p></div>
+<div><h3>AI-ready data</h3><p>Document processing, chunking, embedding evaluation, information retrieval, web scraping, PDF and email parsing</p></div>
+<div><h3>Tools</h3><p>Git, Azure DevOps, JIRA, Windsurf, YAML, Power BI, Tableau, Excel</p></div>
+<div><h3>Education</h3><p>M.Tech in Data Science and Engineering, BITS Pilani (expected 2027). B.Tech in Computer Science, VIT, with the Chancellor's Award for Excellence.</p></div>
+</div>
+</section>
+
+<div class="contact" id="contact">
+<h2>Looking for what's next in AI data platforms</h2>
+<p>I'm open to data engineering roles where reliable pipelines and good metadata make AI products work. Write to me and I'll reply soon.</p>
+<div class="btns"><a class="btn primary" href="mailto:saloniparekh2001@gmail.com">saloniparekh2001@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/saloni--parekh" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<footer>Saloni Parekh, Mumbai</footer>
+</div>
+
+<script>
+var S=[
+["Acquire","Web pages, emails, PDFs and Excel files become reliable, scheduled data feeds.","Primary engineer on 50+ production data initiatives, built with business users."],
+["Validate","Checks run before bad data reaches production, and problems are traced to their root cause.","SQL and Python validation frameworks, plus automated validation inside the Spectra ingestion."],
+["Enrich","Standardized metadata makes every document findable by broker, asset class and geography.","ASIMOV ingests broker research from 2019 onwards with metadata-driven retrieval."],
+["Serve","Curated Snowflake datasets give AI search and analytics teams something dependable to build on.","Reusable data products, and ongoing research on chunking and embeddings for retrieval quality."]];
+var tabs=[].slice.call(document.querySelectorAll(".stage")),d=document.getElementById("detail"),timer;
+function show(i){tabs.forEach(function(t,k){t.setAttribute("aria-selected",k===i)});
+d.innerHTML="<h3>"+S[i][0]+"</h3><p>"+S[i][1]+"</p><p class='proof'>"+S[i][2]+"</p>"}
+tabs.forEach(function(t){t.addEventListener("click",function(){clearInterval(timer);show(+t.dataset.i)})});
+show(0);
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){var n=0;timer=setInterval(function(){n++;if(n>4){clearInterval(timer);return}show(n%4)},1100)}
+</script>
+</body>
+</html>
